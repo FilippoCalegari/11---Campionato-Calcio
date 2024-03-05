@@ -82,6 +82,111 @@ namespace _11___Campionato_Calcio
                 get => _nome;
                 set => _nome = value;
             }
+            private AllenatoreInPrima _primoallenatore;
+            public AllenatoreInPrima PrimoAllenatore
+            {
+                get => _primoallenatore;
+                set => _primoallenatore = value;
+            }
+            private AllenatoreInSeconda _secondoallenatore;
+            public AllenatoreInSeconda Secondoallenatore
+            {
+                get => _secondoallenatore;
+                set => _secondoallenatore = value;
+            }
+            private Calciatore _ngiocatori;
+            public Calciatore nGiocatori
+            {
+                get => _ngiocatori;
+                set => _ngiocatori = value;
+            }
+            private List<Partita> _partitaincasa;
+            public List<Partita> PartitaInCasa
+            {
+                get => _partitaincasa;
+                set => _partitaincasa = value;
+            }
+            private List<Partita> _partitaintrasferta;
+            public List<Partita> PartitaInTrasferta
+            {
+                get => _partitaintrasferta;
+                set => _partitaintrasferta = value;
+            }
+        }
+        class Calciatore : Persona
+        {
+            private string _ruolo;
+            public string Ruolo
+            {
+                get => _ruolo;
+                set => _ruolo = value;
+            }
+            private Squadra _squadra;
+            public Squadra Squadra
+            {
+                get => _squadra;
+                set => _squadra = value;
+            }
+            public int Eta(DateTime oggi)
+            {
+                return 0;
+            }
+        }
+        class Partita
+        {
+            private Arbitro _arbitro;
+            public Arbitro Arbitro
+            {
+                get => _arbitro;
+                set => _arbitro = value;
+            }
+            private DateTime _data;
+            public DateTime Data
+            {
+                get => _data;
+                set => _data = value;
+            }
+            private string _risultato;
+            public string Risultato
+            {
+                get => _risultato;
+                set => _risultato = value;
+            }
+        }
+        class Arbitro : Persona
+        {
+            private List<Partita> _partita;
+            public List<Partita> Partita
+            {
+                get => _partita;
+                set => _partita = value;
+            }
+            public int Eta(DateTime oggi)
+            {
+                return 0;
+            }
+            public void UfficializzaRisultato()
+            {
+                
+            }
+        }
+        class AllenatoreInPrima
+        {
+            private Squadra _squadra;
+            public Squadra Squadra
+            {
+                get => _squadra;
+                set => _squadra = value;
+            }
+        }
+        class AllenatoreInSeconda
+        {
+            private Squadra _squadraallenata;
+            public Squadra SquadraAllenata
+            {
+                get => _squadraallenata;
+                set => _squadraallenata = value;
+            }
         }
         static void Main(string[] args)
         {
