@@ -170,7 +170,7 @@ namespace _11___Campionato_Calcio
                 
             }
         }
-        class AllenatoreInPrima
+        class AllenatoreInPrima : Persona
         {
             private Squadra _squadra;
             public Squadra Squadra
@@ -179,7 +179,7 @@ namespace _11___Campionato_Calcio
                 set => _squadra = value;
             }
         }
-        class AllenatoreInSeconda
+        class AllenatoreInSeconda : Calciatore
         {
             private Squadra _squadraallenata;
             public Squadra SquadraAllenata
